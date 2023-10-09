@@ -3,15 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <link href="/dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jogo Bonito Review</title>
+    <title>Jogo Bonito</title>
 </head>
 <body class="min-h-screen bg-slate-50 dark:bg-black dark:text-white">
-    <header class="bg-orange-400 text-white sticky top-0 z-10">
-        <section class="max-w-4xl p-4 mx-auto flex justify-between items-center">
-            <img src=""  alt="logo">
-            <h1 class="text-3xl  font-medium"><a href="">Jogo Bonito</a></h1>
-        </section>
+    <header>
+        <div class="logo">
+            <img src="" alt="logo">
+        </div>
+        <h2>⚽ Jogo Bonito ⚽</h2>
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Leaderboard</a></li>
+                <li><button><a href="">Contact Us</a></button></li>
+            </ul>
+        </nav>
     </header>
+    <main>
+        <div class="winning-team">
+            <div class="team-image">
+                <img src="images/trans-nature.jpg" alt="Winning Team Image">
+                <div class="animated-border"></div>
+            </div>
+            <div class="manager-details">
+                <h2 id="gameweek">Gameweek</h2>
+                <p id="manager-name">Manager Name: </p>
+                <p id="mascot">Mascot: Mascot Name</p>
+                <p id="points-earned">Points Gained: <span id="points">0</span></p>
+                <div class="manager-background"></div>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
