@@ -37,6 +37,9 @@ nav ul{
     list-style: none;
     display: flex;
 }
+nav ul li{
+    display: inline-block;
+}
 nav li{
     margin-right: 20px;
     margin-left: 15px;
@@ -54,6 +57,12 @@ nav a:hover::after{
     bottom: 0;
     background-color: rgb(253, 165, 0);
 }
+nav li .contact{
+    padding: 7px;
+    margin-left: 5px;
+    border: 0.5px solid grey;
+    border-radius: 50px;
+}
 
 /* main section */
 main{
@@ -61,21 +70,29 @@ main{
     height: 60vh;
 }
 .winning-team{
+    margin-top: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    flex: 1;
+    height: 70vh;
 }
 .team-image{
-    width: 50%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     position: relative;
     overflow: hidden;
     border: 1px solid white;
+    height: 100%;
+    width: 100%;
 }
 .team-image img{
-    max-height: 100%;
-    width: auto;
+    max-height: 90%;
+    /* width: auto; */
+    border-radius: 30px;
     /* max-height: 60%; */
 }
 .manager-details{
