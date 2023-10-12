@@ -1,41 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link href="/dist/output.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="/dist/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
     <title>Jogo Bonito</title>
-</head>
-<body class="min-h-screen bg-slate-50 dark:bg-black dark:text-white">
+  </head>
+  <body class="min-h-screen bg-slate-50 dark:bg-black dark:text-white">
     <header>
-        <div class="logo">
-            <img src="" alt="logo">
-        </div>
-        <h2>⚽ Jogo Bonito ⚽</h2>
-        <nav>
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Leaderboard</a></li>
-                <li><button class="contact"><a href="">Contact Us</a></button></li>
-            </ul>
-        </nav>
+      <div class="logo">
+        <img src="" alt="logo" />
+      </div>
+      <h2>⚽ Jogo Bonito ⚽</h2>
+      <nav>
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">Leaderboard</a></li>
+          <li>
+            <button class="contact"><a href="">Contact Us</a></button>
+          </li>
+        </ul>
+      </nav>
     </header>
-    <main>
-        <div class="winning-team">
-            <div class="team-image">
-                <img src="images/trans-nature.jpg" alt="Winning Team Image">
-                <div class="animated-border"></div>
-            </div>
-            <div class="manager-details">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <!-- Each slide represents a gameweek -->
+        <div class="swiper-slide">
+          <main>
+            <div class="winning-team">
+              <div class="team-image">
+                <img src="" alt="Winning Team Image" id="team-image" />
+              </div>
+              <div class="manager-details">
                 <h2 id="gameweek">Gameweek</h2>
-                <p id="manager-name">Manager Name: </p>
+                <p id="manager-name">Manager Name:</p>
                 <p id="mascot">Mascot: Mascot Name</p>
-                <p id="points-earned">Points Gained: <span id="points">0</span></p>
+                <p id="points-earned">
+                  Points Gained: <span id="points">0</span>
+                </p>
                 <div class="manager-background"></div>
+              </div>
+              <div class="swiper-pagination"></div>
             </div>
+          </main>
         </div>
-    </main>
-</body>
+        <!-- Add more slides for each gameweek as needed -->
+      </div>
+    </div>
+  </body>
 </html>

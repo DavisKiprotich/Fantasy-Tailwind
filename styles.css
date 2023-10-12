@@ -91,9 +91,9 @@ main{
 }
 .team-image img{
     max-height: 90%;
-    /* width: auto; */
+    width: auto;
     border-radius: 30px;
-    /* max-height: 60%; */
+    max-width: 100%;
 }
 .manager-details{
     width: 40%;
