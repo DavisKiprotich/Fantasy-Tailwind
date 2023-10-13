@@ -57,12 +57,7 @@ nav a:hover::after{
     bottom: 0;
     background-color: rgb(253, 165, 0);
 }
-nav li .contact{
-    padding: 7px;
-    margin-left: 5px;
-    border: 0.5px solid grey;
-    border-radius: 50px;
-}
+
 
 /* main section */
 main{
@@ -98,6 +93,13 @@ main{
 .manager-details{
     width: 40%;
     padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 40px;
+    border: 1px solid orange;
+
 }
 .manager-details h2,
 .manager-details p {
@@ -105,4 +107,7 @@ main{
     margin-bottom: 20px;
     color: aliceblue;
     font-weight: 500;
+    letter-spacing: 0.1em;
+    width: 100%;
+    padding: 20px 10px 10px;
 }
