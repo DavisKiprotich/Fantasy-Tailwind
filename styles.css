@@ -101,13 +101,13 @@ main{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border: 1px solid orange;
+    /* border: 1px solid orange; */
     overflow: hidden;
     margin-left: 35px;
     
 }
 
-.manager-details::before{
+.winning-team .manager-details::before{
     content: '';
     position: absolute;
     top: -50%;
@@ -115,7 +115,7 @@ main{
     width: 700px;
     height: 500px;
     background: linear-gradient(0deg, transparent,transparent,orange,orange,orange);
-    z-index: 1;
+    z-index: 101;
     animation: animate 6s linear infinite;
 }
 @keyframes animate{
