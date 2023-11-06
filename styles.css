@@ -71,6 +71,7 @@ main{
     align-items: center;
     padding: 20px;
     height: 70vh;
+    z-index: 2;
 }
 .team-image{
     flex: 1;
@@ -91,52 +92,48 @@ main{
     border-radius: 30px;
     max-width: 90%;
 }
-.manager-details{
-    width: 650px;
-    /* width: 40%; */
-    height: 500px;
-    padding: 5px;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    /* border: 1px solid transparent; */
-    overflow: hidden;
-    margin-left: 35px;
+.box{
     position: relative;
-    z-index: 2;
-    background: #000;
+    width: 600px;
+    height: 600px;
+    background: #0a0a0a;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
-
-.manager-details::before{
+.box::before{
     content: '';
     position: absolute;
-    /* top: 0; */
-    top: -2px;
-    /* left: 0; */
-    left: -2px;
-    /* right: -50%; */
-    right: -2px;
-    bottom: -2px;
-    /* width: 650px; */
-    /* width: 100%; */
-    /* height: 500px; */
-    /* height: 100%; */
-    background: linear-gradient(0deg, transparent,transparent,orange,orange,orange);
-    animation: animate 6s linear infinite;
+    top: -50%;
+    left: -50%;
+    width: 600px;
+    height: 600px;
+    background: linear-gradient(0deg, transparent,
+    transparent,orange,orange,orange);
     z-index: 1;
-    transform-origin: center;
+    transform-origin: bottom right;
+    animation: animate 8s linear infinite;
+}
+.box::after{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 500px;
+    height: 500px;
+    background: linear-gradient(0deg, transparent,
+    transparent,orange,orange,orange);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 7s linear infinite;
+    animation-delay: -3s;
 }
 @keyframes animate{
     0%{
-        /* border-color: transparent; */
         transform: rotate(0deg);
     }
     
     100%{
-        /* border-color: transparent; */
         transform: rotate(360deg);
     }
 }
