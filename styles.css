@@ -122,7 +122,7 @@ main{
     width: 500px;
     height: 500px;
     background: linear-gradient(0deg, transparent,
-    transparent,orange,orange,orange);
+    transparent,#45f3ff,orange,#45f3ff);
     z-index: 1;
     transform-origin: bottom right;
     animation: animate 7s linear infinite;
@@ -138,6 +138,16 @@ main{
     }
 }
 
+.box .manager-details{
+    position: absolute;
+    background: black;
+    inset: 4px;
+    padding: 50px 40px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+}
 .manager-details h2,
 .manager-details p {
     text-align: center;
