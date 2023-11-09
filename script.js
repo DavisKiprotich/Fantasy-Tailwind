@@ -12,28 +12,28 @@ const gameweekData = [
         managerName: "Manager 2",
         mascot: "Mascot 2",
         pointsEarned: 42,
-        imageUrl: "team-image-2.jpg",
+        imageUrl: "images/team-image-2.jpg",
     },
     {
         gameweek: 3,
         managerName: "Manager 2",
         mascot: "Mascot 2",
         pointsEarned: 42,
-        imageUrl: "team-image-2.jpg",
+        imageUrl: "images/team-image-2.jpg",
     },
     {
         gameweek: 4,
         managerName: "Manager 2",
         mascot: "Mascot 2",
         pointsEarned: 42,
-        imageUrl: "team-image-2.jpg",
+        imageUrl: "images/team-image-2.jpg",
     },
     {
         gameweek: 5,
         managerName: "Manager 2",
         mascot: "Mascot 2",
         pointsEarned: 42,
-        imageUrl: "team-image-2.jpg",
+        imageUrl: "images/team-image-2.jpg",
     },
     {
         gameweek: 6,
@@ -86,17 +86,32 @@ const mySwiper = new Swiper(".swiper-container", {
     },
 });
 
-// Function to update the content based on gameweek data
-function updateContent(data) {
-    const slide = mySwiper.slides[mySwiper.activeIndex];
+// function updateWinningTeam(gameWeek) {
+//     const slide = mySwiper.slides[mySwiper.activeIndex];
+//     const
 
-    // Update the content in the current slide
-    slide.querySelector(".gameweek").textContent = `Gameweek: ${data.gameweek}`;
-    slide.querySelector(".manager-name").textContent = `Manager: ${data.managerName}`;
-    slide.querySelector(".mascot").textContent = `Mascot: ${data.mascot}`;
-    slide.querySelector(".points-earned span").textContent = data.pointsEarned;
-    slide.querySelector(".team-image").src = data.imageUrl;
-    slide.querySelector(".manager-background").style.background = data.backgroundGradient;
-}
 
+//     slide.querySelector(".gameweek").textContent = `Gameweek: ${data.gameweek}`;
+//     slide.querySelector(".manager-name").textContent = `Manager: ${data.managerName}`;
+//     slide.querySelector(".mascot").textContent = `Mascot: ${data.mascot}`;
+//     slide.querySelector(".points-earned span").textContent = data.pointsEarned;
+//     slide.querySelector(".team-image").src = data.imageUrl;
+//     slide.querySelector(".manager-background").style.background = data.backgroundGradient;
+// }
+
+// Function to update the winning team section based on the game week
+function updateWinningTeam(gameWeek) {
+    // Find the game week details in the array
+    const selectedGameWeek = gameWeeks.find(week => week.gameweek === gameWeek);
+  
+    // Update the HTML elements with the corresponding details
+    document.getElementById("gameweek").textContent = `Gameweek ${selectedGameWeek.gameweek}`;
+    document.getElementById("manager-name").textContent = `Manager Name: ${selectedGameWeek.managerName}`;
+    document.getElementById("mascot").textContent = `Mascot: ${selectedGameWeek.mascot}`;
+    document.getElementById("points").textContent = selectedGameWeek.points;
+    document.getElementById("team-image").src = selectedGameWeek.teamImage;
+  }
+  
+  // Example usage: Update winning team for Gameweek 1
+  updateWinningTeam(1);
 
