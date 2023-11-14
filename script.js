@@ -2,7 +2,7 @@
 const gameweekData = [
     {
         gameweek: 1,
-        managerName: "Manager 1",
+        managerName: "Denis Kiptoo",
         mascot: "Mascot 1",
         pointsEarned: 38,
         imageUrl: "images/Gameweek1.PNG",
